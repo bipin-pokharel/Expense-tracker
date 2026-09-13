@@ -14,4 +14,25 @@ export function getTotalIncome(expenses) {
     .reduce((total, entry) => total + entry.amount, 0);
 }
 
-export
+export function getTotalExpenses(expenses) {
+  return expenses
+    .filter((entry) => entry.type === "expenses")
+    .reduce((total, entry) => total + entry.amount, 0);
+}
+
+export function getCategoryTotals(expenses) {
+  const totals = {};
+
+  expenses
+    .filter((entry) => entry.type === "expenses")
+    .forEach((entry) => {
+      if (!totals[entry.category]) {
+        totals[entry.category] = 0;
+      }
+      totals[entry.category] += entry.amount;
+    });
+  return Object.entries(totals).map(([category, total]) => ({
+    category,
+    total,
+  }));
+}
