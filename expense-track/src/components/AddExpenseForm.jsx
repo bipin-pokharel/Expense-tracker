@@ -8,7 +8,7 @@ export function AddExpenseForm({ onAddExpense }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!description.trim() || amount) {
+    if (!description.trim() || !amount) {
       return;
     }
     const newExpense = {
