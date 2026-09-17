@@ -30,6 +30,7 @@ export function AddExpenseForm({ onAddExpense }) {
       <input
         type="text"
         placeholder="Description"
+        value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
       <input
