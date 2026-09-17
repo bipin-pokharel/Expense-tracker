@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 import { AddExpenseForm } from "./components/AddExpenseForm";
 import { CategoryChart } from "./components/CategoryChart";
 import { ExpenseList } from "./components/ExpenseList";
