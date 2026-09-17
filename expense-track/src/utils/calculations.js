@@ -16,7 +16,7 @@ export function getTotalIncome(expenses) {
 
 export function getTotalExpenses(expenses) {
   return expenses
-    .filter((entry) => entry.type === "expenses")
+    .filter((entry) => entry.type === "expense")
     .reduce((total, entry) => total + entry.amount, 0);
 }
 
@@ -24,7 +24,7 @@ export function getCategoryTotals(expenses) {
   const totals = {};
 
   expenses
-    .filter((entry) => entry.type === "expenses")
+    .filter((entry) => entry.type === "expense")
     .forEach((entry) => {
       if (!totals[entry.category]) {
         totals[entry.category] = 0;
