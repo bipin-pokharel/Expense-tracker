@@ -1,4 +1,4 @@
-export function ExpeseItem({ expense, onDelete }) {
+export function ExpenseItem({ expense, onDelete }) {
   const isIncome = expense.type === "income";
 
   return (
